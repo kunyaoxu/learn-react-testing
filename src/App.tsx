@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Hello from './components/Hello';
+import Button from './components/Button';
 
 function App() {
   return (
@@ -19,6 +21,10 @@ function App() {
           Learn React
         </a>
       </header>
+
+      <Hello />
+      <Hello name="Lothair" />
+      <Button text="按鈕" onClick={() => console.log('嗨 我是按鈕')} />
     </div>
   );
 }
