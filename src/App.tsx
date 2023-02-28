@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Hello from './components/Hello';
 import Button from './components/Button';
+import Posts from './components/Posts';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       <Hello />
       <Hello name="Lothair" />
       <Button text="按鈕" onClick={() => console.log('嗨 我是按鈕')} />
+      <Posts />
     </div>
   );
 }
