@@ -3,7 +3,7 @@ import { render, screen, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Posts from './Posts';
 
-jest.mock('apis/posts');
+jest.mock('../../apis/posts');
 
 // TODO: 這樣可以覆寫 __mocks__ 底下的 mock 設定
 // jest.mock('apis/posts', () => ({
@@ -30,6 +30,9 @@ describe('Posts render', () => {
     });
     await waitFor(() => {
       expect(screen.getByText('title13')).toBeInTheDocument();
+    });
+    await waitFor(() => {
+      expect(screen.getByText('first post: title1')).toBeInTheDocument();
     });
   });
 });
